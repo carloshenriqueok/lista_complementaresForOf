@@ -7,11 +7,17 @@
     */
 
     //Entrada
-
-
+    let listaBebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
     //Processamento
 
-
+    let permitidas = [];
+    for(bebida of listaBebidas){
+        alert(bebida)
+        const possue = prompt(`Essa bebida possue alcool? ("SIM" ou "NÃO")`);
+            if(possue === "NÃO"){
+                permitidas.push(bebida);
+            }
+    }
     //Saída
-
+    document.write(`As bebidas PERMITIDAS para menores de 18 anos: <ul><li>`, permitidas.join(`</li><li>`), `</li><ul>`)
 </script>
