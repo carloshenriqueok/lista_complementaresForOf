@@ -26,9 +26,14 @@
             pr.push(cidade)
         }
     }
-    if(rs.length > sc.length && rs.length > pr.length){
-        (sc.length > pr.length) ?
-    }
+    let estados = [
+        {nome: "RS", cidades: rs},
+        {nome: "SC", cidades: sc},
+        {nome: "PR", cidades: pr}
+    ]
+    estados.sort((a, b) => b.cidades.length - a.cidades.length);
     //Saída
-    
+    for(let estado of estados){
+        document.write(`${estado.nome}: ${estado.cidades.join(", ")} <br>`);
+    }
 </script>

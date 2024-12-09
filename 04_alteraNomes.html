@@ -3,16 +3,19 @@
     /*
     Considere a existência dos seguintes nomes:
     let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
-    Verifique se esses nomes contém letras com acento agudo e substitua por letras sem acento agudo.
+    Verifique se esses nomes contém nomeCorrigido + com acento agudo e substitua por nomeCorrigido + sem acento agudo.
     Apresente a lista corrigida ao final do programa.
     */
 
     //Entrada
-
-
+    let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
+    let substituido = []
     //Processamento
-
-
+    for(nome of nomes){
+        let nomeCorrigido = nome;
+        nomeCorrigido = nomeCorrigido.replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u");
+        substituido.push(nomeCorrigido);
+    }
     //Saída
-
+    document.write(`Nomes corrigidos: <br> ${substituido.join(", ")}`)
 </script>
