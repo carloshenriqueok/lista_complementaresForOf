@@ -7,9 +7,19 @@
 
     //Entrada
     const palavra = prompt(`Informe uma palavra:`)
+    let arrayPalavra = Array.from(palavra);
+    let vogaisPalavra = [];
+    let consoantes = [];
+    const vogais = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
     //Processamento
-
-
+    for(letra of palavra){
+        if(vogais.includes(letra)){
+            vogaisPalavra.push(letra);
+        }
+        else{
+            consoantes.push(letra);
+        }
+    }
+    document.write(`A palavra "${palavra}"" possui <br> ${vogaisPalavra.length} vogais (${vogaisPalavra.join(" - ")}) <br> ${consoantes.length} consoantes (${consoantes.join(" - ")})`)
     //Saída
-
 </script>

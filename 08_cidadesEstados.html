@@ -8,11 +8,27 @@
     */
 
     //Entrada
-
-
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+    let rs = [];
+    let sc = [];
+    let pr = [];
+    let ordem;
     //Processamento
-
-
+    for(cidade of cidades){
+        const estado = prompt(`Qual estado se localiza ${cidade}? ("RS", "SC", ou "PR". TUDO MAIUSCULO)`);
+        if(estado === "RS"){
+            rs.push(cidade)
+        }
+        else if(estado === "SC"){
+            sc.push(cidade)
+        }
+        else{
+            pr.push(cidade)
+        }
+    }
+    if(rs.length > sc.length && rs.length > pr.length){
+        (sc.length > pr.length) ?
+    }
     //Saída
-
+    
 </script>
