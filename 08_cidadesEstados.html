@@ -12,10 +12,9 @@
     let rs = [];
     let sc = [];
     let pr = [];
-    let ordem;
     //Processamento
-    for(cidade of cidades){
-        const estado = prompt(`Qual estado se localiza ${cidade}? ("RS", "SC", ou "PR". TUDO MAIUSCULO)`);
+    for(const cidade of cidades){
+        const estado = prompt(`Qual estado se localiza ${cidade}? ("RS", "SC", ou "PR")`).toUpperCase();
         if(estado === "RS"){
             rs.push(cidade)
         }
